@@ -24,7 +24,11 @@ $ ./generate-input.h-labels.py /usr/include/linux/input-event-codes.h > input.h-
 4. 生成可执行文件
 
 ```
+# 在Linux系统宿主机
 $ gcc -o getevent getevent.c
+
+# 交叉编译到嵌入式ARM目标机
+$ make
 ```
 
 5. sendevent可以直接将`sendevent_main`修改为`main`，不依赖其他文件，可以直接编译通过，此处不多做介绍。
